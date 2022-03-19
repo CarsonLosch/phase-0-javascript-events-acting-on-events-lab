@@ -46,3 +46,18 @@ document.addEventListener("keydown", function(e) {
         moveDodgerUp();
     }
 });
+
+function moveDodgerDown() {
+    const upNumbers = dodger.style.bottom.replace("px", "");
+    const up = parseInt(upNumbers, 10);
+
+    if (up > 0) {
+        dodger.style.bottom = `${up - 1}px`;
+    }
+}
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowDown") {
+        moveDodgerDown();
+    }
+});
